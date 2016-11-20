@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'first-app',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://emberapp-3fb13.firebaseio.com',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -44,3 +46,4 @@ module.exports = function(environment) {
 
   return ENV;
 };
+
